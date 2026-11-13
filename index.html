@@ -1,11 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10172b">
+  <title>よこスクロールアクション</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
 </head>
 <body>
-    ようこそ私のページへ
+  <main class="game">
+    <header class="game__header">
+      <div>
+        <p class="eyebrow">MINI ADVENTURE</p>
+        <h1>よこスクロールアクション</h1>
+      </div>
+      <button class="restart" id="restart" type="button">最初から</button>
+    </header>
+
+    <section class="game__screen" aria-label="ゲーム画面">
+      <canvas id="game" width="960" height="540" aria-label="横スクロールアクションゲーム">
+        このゲームを遊ぶには、Canvasに対応したブラウザーが必要です。
+      </canvas>
+    </section>
+
+    <div class="game__footer">
+      <p class="instructions">移動: ← → / A D　ジャンプ: Space / ↑ / W　やり直し: R</p>
+      <div class="touch-controls" aria-label="タッチ操作">
+        <button class="control-button" type="button" data-control="left" aria-label="左へ移動">←</button>
+        <button class="control-button" type="button" data-control="right" aria-label="右へ移動">→</button>
+        <button class="control-button control-button--jump" type="button" data-control="jump">ジャンプ</button>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
